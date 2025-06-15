@@ -28,6 +28,8 @@ function UILibrary:CreateNotification(baslik : string, yazi : string, timeX : nu
 		textLabel.TextWrapped = true
 		textLabel.Visible = true
 		textLabel.TextTransparency = 1
+		textLabel.TextColor3 = Color3.fromRGB(210,210,210)
+		textLabel.BorderSizePixel = 0
 		textLabel.BackgroundTransparency = 1
 		textLabel.BackgroundColor3 = Color3.fromRGB(30,30,30)
 
@@ -55,6 +57,7 @@ function UILibrary:Init()
 	NotificationFrame.Size = UDim2.new(0.32,0, 0.6,0)
 	NotificationFrame.BackgroundTransparency = 1
 	NotificationFrame.ClipsDescendants = true
+	NotificationFrame.Position = UDim2.new(.68,0,0.381,0)
 	
 	local UIListLayout = Instance.new("UIListLayout", NotificationFrame)
 	UIListLayout.Wraps = true
