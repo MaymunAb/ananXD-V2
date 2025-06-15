@@ -1,0 +1,3 @@
+# createUIelement(elementType[currently only button] ...[arg])
+# CreateNotification(baslik : string, yazi : string, timeX : number)
+# Init(gameName)
