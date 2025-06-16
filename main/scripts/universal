@@ -1,0 +1,25 @@
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/MaymunAb/ananXD-V2/refs/heads/main/UI-Library.lua"))()
+local iydeb = false
+local revdeb = false
+lib:Init()
+task.wait(0.5)
+local iy = lib:createUIelement("button", "buttonText", "Infinite Yield")
+local reviz = lib:createUIelement("button", "buttonText", "Reviz Admin")
+iy.MouseButton1Click:Connect(function()
+if iydeb == true then 
+lib:CreateNotification("Error", "You are already launched [Infinite Yield]")
+return {}
+end
+iydeb = true
+lib:CreateNotification("Success", "Launching [Infinite Yield]")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+reviz.MouseButton1Click:Connect(function()
+if revdeb == true then 
+lib:CreateNotification("Error", "You are already launched [Reviz Admin]")
+return {}
+end
+revdeb = true
+lib:CreateNotification("Success", "Launching [Reviz Admin]")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Pa1ntex/reviz-admin-v2-script-FE/refs/heads/main/Reviz%20admin%20v2%20FE"))()
+end)
